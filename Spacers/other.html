@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="live streaming, Spacers, streaming website"
+    />
+    <meta
+      name="description"
+      content="Spacers has taken streaming to the next level. We have something for everyone, whether you're a streamer or viewer. Participate in events to level up, gain star coins, and use them to buy items from the event shop! Join now and start your streaming journey!"
+    />
+    <title>Spacers</title>
+    <link rel="stylesheet" href="SpacersStyling.css" />
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+    <style type="text/css"></style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ </head>
+  <body>
+    <div class="navbarwebsz">
+      <nav class="navbar">
+            <a href="../home.html"
+            ><img class="logo" src="./images/spacerslogo.png" alt=""
+          /></a> 
+            <form role="search" id="form">
+          <input
+            type="search"
+            id="query"
+            name="q"
+            placeholder="Search..."
+            aria-label="Search through site content"
+          />
+          <buttonb>
+            <svg viewBox="0 0 1024 1024">
+              <path
+                class="path1"
+                d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"
+              ></path>
+            </svg>
+          </buttonb>
+        </form>
+        <script>
+          const f = document.getElementById("form");
+          const q = document.getElementById("query");
+          const site = "http://127.0.0.1:5500/usersignin.html#";
+
+          function submitted(event) {
+            event.preventDefault();
+            const url = google + site + "+" + q.value;
+            const win = window.open(url, "_blank");
+            win.focus();
+          }
+          f.addEventListener("submit", submitted);
+        </script>
+        <ul>
+          <li><a href="../home.html">Home</a></li>
+          <li><a href="../live.html">Live</a></li>
+          <li><a href="../clips.html">Clips</a></li>
+          <li class="dropdown">
+            <a href="#">About Us</a>
+            <div class="dropdown-content">
+              <a href="../communityGL.html">Community Guidelines</a>
+              <a href="../PrivacyPolicy.html">Privacy Policy</a>
+              <a href="../TOS.html">Terms of Service</a>
+              <a href="../DMCA.html">DMCA Policy</a>
+              <a href="../ContactUs.html">Contact Us</a>
+            </div>
+          </li>
+        </ul>
+        <img src="images/PP.JPG" class="user-pic" onclick="toggleMenu(event)" />
+        <div class="sub-menu-wrap" id="submenu">
+          <div class="sub-menu"></div>
+          <div class="user-info">
+            <img src="images/PP.JPG" />
+            <h3>Pacman38</h3>
+          </div>
+          <hr />
+          <a href="../mychannel.html" class="sub-menu-link">
+            <p>My Channel</p>
+            <span>></span>
+          </a>
+          <a href="../streamingdash.html" class="sub-menu-link">
+            <p>Streaming Dashboard</p>
+            <span>></span>
+          </a>
+          <a href="../settings.html" class="sub-menu-link">
+            <p>Settings</p>
+            <span>></span>
+          </a>
+          <a href="../logout.html" class="sub-menu-link">
+            <p>Logout</p>
+            <span>></span>
+          </a>
+        </div>
+      </div>
+      </nav>
+    </div>
+    <script>
+$(document).ready(function() {
+  $('.user-pic').click(function(e) {
+    e.stopPropagation();
+    $('.sub-menu-wrap').toggleClass('open-menu');
+  });
+
+  $(document).click(function(e) {
+    if (!$(e.target).is('.user-pic, .sub-menu-wrap, .sub-menu-wrap *')) {
+      $('.sub-menu-wrap').removeClass('open-menu');
+    }
+  });
+});
+    </script>
+  </body>
+</html>
+</body>
+</html>
+</html>
